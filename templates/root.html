@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purple Home</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+<div class="card-body">
+    <div class="form-group">
+        <h4 class="card-title">Customer</h4>
+        <a class="dropdown-item" href="{{url_for('loginCustomerHelp')}}">Login </a>
+        <a class="dropdown-item" href="{{url_for('regCustomerHelp')}}">Sign Up</a>
+    </div>
+</div>
+<div class="card-body">
+    <div class="form-group">
+        <h4 class="card-title">Driver</h4>
+        <a class="dropdown-item" href="{{url_for('loginDriverHelp')}}">Login </a>
+        <a class="dropdown-item" href="{{url_for('regDriverHelp')}}">Sign Up</a>
+    </div>
+</div>
+</body>
+</html>

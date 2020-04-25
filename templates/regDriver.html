@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Driver Registration</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth">
+            <div class="row flex-grow">
+                <div class="col-lg-5 mx-auto">
+                    <div class="auth-form-light text-left p-5">
+                        <div class="card-rounded">
+                            <div class="card-body">
+                                <center><h4 class="card-title">{{msg}}</h4></center>
+                                <p></p>
+                                <form class="forms-sample" action="/regDriver" method="post">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" class="form-control" name="name" placeholder="Name"
+                                               value="{{name}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email address</label>
+                                        <input type="email" class="form-control" name="email" placeholder="Email"
+                                               value="{{email}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Contact No.</label>
+                                        <input type="tel" class="form-control" name="contact" placeholder="Contact No."
+                                               value="{{contact}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" name="pass" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleSelectGender">Gender</label>
+                                        <select class="form-control" id="exampleSelectGender" name="gender">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <textarea class="form-control" name="add" rows="2">{{address}}</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Driving Licence No.</label>
+                                        <input type="text" class="form-control" name="licence"
+                                               placeholder="Driving Licence No." value="{{licence}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleSelectAvailability">Availability</label>
+                                        <select class="form-control" id="exampleSelectAvailability" name="status">
+                                            <option value="No">No</option>
+                                            <option value="Yes">Yes</option>
+                                        </select>
+                                    </div>
+                                    <center>
+                                        <button type="submit" class="btn btn-gradient-primary btn-rounded mr-2"
+                                                value="Sign-up" name="choice">Submit
+                                        </button>
+                                        <button class="btn btn-light btn-rounded" value="Cancel" name="choice">Cancel
+                                        </button>
+                                    </center>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
